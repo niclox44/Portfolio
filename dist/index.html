@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="blob blob--a"></div>
+    <div class="blob blob--b"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="#">
+      <span class="brand__dot"></span>
+      <span>Carlos Nicolás Andicoberry López</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#projects">Proyectos</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#contact" class="pill">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero__text">
+        <h1>
+          Portfolio
+          <span class="accent">Orbit 3D</span>
+        </h1>
+        <p>
+          Un portfolio con carrusel rotatorio en 3D para mostrar proyectos como “cartas” en órbita.
+          Ligero, sin JS, y con estética moderna.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">Ver proyectos</a>
+          <a class="btn btn--ghost" href="#contact">Hablemos</a>
+        </div>
+
+        <div class="meta">
+          <span class="chip">C / C++</span>
+          <span class="chip">Redes</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Linux</span>
+        </div>
+      </div>
+
+      <div class="hero__showcase" aria-label="Carrusel 3D de proyectos">
+        <div class="stage">
+          <div class="ring" id="projects">
+            <article class="card" style="--i:0">
+              <h3>Blackjack TCP</h3>
+              <p>Servidor multicliente con select() y protocolo simple.</p>
+              <div class="tags">
+                <span>Sockets</span><span>C</span><span>TCP</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+
+            <article class="card" style="--i:1">
+              <h3>CNM Labs</h3>
+              <p>Topologías con RIP/OSPF/EIGRP, routing y troubleshooting.</p>
+              <div class="tags">
+                <span>Routing</span><span>CLI</span><span>PT</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+
+            <article class="card" style="--i:2">
+              <h3>DB Gym</h3>
+              <p>Modelo relacional, consultas y normalización.</p>
+              <div class="tags">
+                <span>SQL</span><span>ER</span><span>DDL</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+
+            <article class="card" style="--i:3">
+              <h3>Cripto Report</h3>
+              <p>AES-GCM, ECC, DH y diseño tipo TLS.</p>
+              <div class="tags">
+                <span>Security</span><span>Crypto</span><span>Docs</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+
+            <article class="card" style="--i:4">
+              <h3>Recommender</h3>
+              <p>Item-item con métricas y evaluación básica.</p>
+              <div class="tags">
+                <span>Algoritmos</span><span>C++</span><span>Datos</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+
+            <article class="card" style="--i:5">
+              <h3>VHDL</h3>
+              <p>MUX, FSM y prácticas digitales documentadas.</p>
+              <div class="tags">
+                <span>HDL</span><span>Digital</span><span>Labs</span>
+              </div>
+              <a class="card__link" href="#contact">Ver más</a>
+            </article>
+          </div>
+
+          <div class="stage__hint">
+            Pasa el ratón para pausar. En móvil, se reduce la animación.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid" id="about">
+      <div class="panel">
+        <h2>Sobre mí</h2>
+        <p>
+          Enfocado en ingeniería del software y redes. Me gusta construir sistemas que funcionen
+          de verdad: desde protocolos y topologías hasta bases de datos.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>Lo que ofrezco</h2>
+        <ul>
+          <li>Proyectos robustos con documentación clara</li>
+          <li>Buenas prácticas, estructura y mantenimiento</li>
+          <li>Orientación a resultados (y a entregar a tiempo)</li>
+        </ul>
+      </div>
+
+      <div class="panel" id="contact">
+        <h2>Contacto</h2>
+        <p>Deja tu email y te respondo:</p>
+        <form class="form" onsubmit="return false;">
+          <input type="email" placeholder="tuemail@ejemplo.com" aria-label="Email" />
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+        <small class="muted">Consejo: añade aquí tus enlaces (GitHub, LinkedIn).</small>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© <span id="y"></span> Portfolio Orbit</span>
+      <span class="muted">Hecho con HTML + CSS</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+  const ring = document.querySelector('.ring');
+
+  let isDragging = false;
+  let lastX = 0;
+  let lastY = 0;
+
+  let rotationY = 0;
+  let rotationX = 10;
+
+  let velocityY = 0;
+  let velocityX = 0;
+
+  const friction = 0.92;
+
+  function animateInertia() {
+    if (!isDragging) {
+      rotationY += velocityY;
+      rotationX += velocityX;
+
+      velocityY *= friction;
+      velocityX *= friction;
+
+      ring.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    }
+    requestAnimationFrame(animateInertia);
+  }
+
+  animateInertia();
+
+  ring.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+    ring.style.cursor = 'grabbing';
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    ring.style.cursor = 'grab';
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - lastX;
+    const deltaY = e.clientY - lastY;
+
+    rotationY += deltaX * 0.4;
+    rotationX -= deltaY * 0.3;
+
+    velocityY = deltaX * 0.2;
+    velocityX = -deltaY * 0.15;
+
+    ring.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+</script>
+
+</body>
+</html>
