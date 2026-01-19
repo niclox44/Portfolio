@@ -52,6 +52,8 @@ small{ color: var(--muted); }
 .blob--a{ left:-140px; top:-120px; background: radial-gradient(circle at 30% 30%, var(--accent), transparent 60%); }
 .blob--b{ right:-180px; top:60px; background: radial-gradient(circle at 30% 30%, var(--accent2), transparent 60%); }
 
+
+
 .grain{
   position:absolute; inset:0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
@@ -174,7 +176,7 @@ small{ color: var(--muted); }
   position:absolute;
   inset: 0;
   margin:auto;
-  width: 320px;
+  width: 290px;
   height: 190px;
   border-radius: var(--radius);
   background: linear-gradient(180deg, #151a2e, #10152a);
@@ -186,7 +188,7 @@ small{ color: var(--muted); }
   /* Distribución alrededor del círculo */
   transform:
     rotateY(calc(var(--i) * 60deg))
-    translateZ(340px);
+    translateZ(250px);
   backdrop-filter: none;
   transition: transform .22s ease;
 }
@@ -280,4 +282,5 @@ small{ color: var(--muted); }
   .ring{ animation: none; }
   .btn{ transition: none; }
 }
+
 
