@@ -1,217 +1,241 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>Carlos Nicolás Andicoberry López - Desarrollador de Software & Redes</title>
+  <meta name="description" content="Portfolio de Carlos Nicolás Andicoberry López. Especializado en ingeniería de software, redes, y desarrollo de sistemas robustos con C/C++, Linux y protocolos TCP/IP.">
+  <meta name="author" content="Carlos Nicolás Andicoberry López">
+  <meta name="keywords" content="desarrollador, software, redes, C, C++, TCP/IP, Linux, portfolio">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carlos Nicolás Andicoberry López - Portfolio">
+  <meta property="og:description" content="Desarrollador especializado en ingeniería de software y redes">
+  <meta property="og:url" content="https://tudominio.com">
+  
+  <!-- Favicon (placeholder - añade tu propio favicon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="bg">
+  <!-- Background Effects -->
+  <div class="bg" aria-hidden="true">
     <div class="blob blob--a"></div>
     <div class="blob blob--b"></div>
     <div class="grain"></div>
   </div>
 
+  <!-- Header -->
   <header class="top">
-    <a class="brand" href="#">
-      <span class="brand__dot"></span>
-      <span>Carlos Nicolás Andicoberry López</span>
+    <a class="brand" href="#" aria-label="Inicio">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__name">
+        <span class="brand__full">Carlos Nicolás Andicoberry López</span>
+        <span class="brand__short">Carlos Andicoberry</span>
+      </span>
     </a>
 
-    <nav class="nav">
-      <a href="#projects">Proyectos</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#contact" class="pill">Contacto</a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="proyects.html">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto" class="pill">Contacto</a>
     </nav>
   </header>
 
   <main class="wrap">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="hero__text">
+        <div class="avatar-wrapper">
+          <img 
+            class="avatar" 
+            src="IMG_3188.png" 
+            alt="Foto de perfil de Carlos Nicolás Andicoberry López"
+            loading="eager"
+            width="160"
+            height="160"
+          >
+        </div>
+        
         <h1>
-          Portfolio
-          <span class="accent">Orbit 3D</span>
+          Desarrollador de
+          <span class="accent">Software & Redes</span>
         </h1>
-        <p>
-          Un portfolio con carrusel rotatorio en 3D para mostrar proyectos como “cartas” en órbita.
-          Ligero, sin JS, y con estética moderna.
+        
+        <p class="hero__intro">
+          Especializado en ingeniería de software, protocolos de red y sistemas robustos. 
+          Construyo soluciones que funcionan de verdad, desde servidores TCP hasta topologías complejas.
         </p>
 
-
-        <div class="meta">
-          <span class="chip">C / C++</span>
-          <span class="chip">Redes</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Linux</span>
+        <div class="meta" role="list" aria-label="Tecnologías principales">
+          <span class="chip" role="listitem">C / C++</span>
+          <span class="chip" role="listitem">Redes TCP/IP</span>
+          <span class="chip" role="listitem">Linux</span>
+          <span class="chip" role="listitem">Arquitectura Software</span>
         </div>
       </div>
 
-      <div class="hero__showcase" aria-label="Carrusel 3D de proyectos">
+      <div class="hero__showcase">
         <div class="stage">
-          <div class="ring" id="projects">
-            <article class="card" style="--i:0">
-              <h3>Blackjack TCP</h3>
-              <p>Servidor multicliente con select() y protocolo simple.</p>
-              <div class="tags">
-                <span>Sockets</span><span>C</span><span>TCP</span>
+          <div class="ring" id="projects" role="region" aria-label="Carrusel de proyectos destacados">
+            
+            <article class="card" style="--i:0" tabindex="0">
+              <h3>Sistemas cliente/servidor</h3>
+              <p>Servidor multicliente con select() y protocolo personalizado en C puro.</p>
+              <div class="tags" role="list">
+                <span role="listitem">Sockets</span>
+                <span role="listitem">C</span>
+                <span role="listitem">TCP/IP</span>
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
 
-            <article class="card" style="--i:1">
-              <h3>CNM Labs</h3>
-              <p>Topologías con RIP/OSPF/EIGRP, routing y troubleshooting.</p>
-              <div class="tags">
-                <span>Routing</span><span>CLI</span><span>PT</span>
+            <article class="card" style="--i:1" tabindex="0">
+              <h3>Web Programming Basics</h3>
+              <p>Fundamental knowledge of front-end web development and responsive design.</p>
+              <div class="tags" role="list">
+                <span role="listitem">HTML</span>
+                <span role="listitem">CSS</span>
+                <span role="listitem">JavaScript</span>
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
 
-            <article class="card" style="--i:2">
-              <h3>DB Gym</h3>
-              <p>Modelo relacional, consultas y normalización.</p>
-              <div class="tags">
-                <span>SQL</span><span>ER</span><span>DDL</span>
+            <article class="card" style="--i:2" tabindex="0">
+              <h3>Plataforma SaaS</h3>
+              <p>Aplicación cloud con bases de datos, CI/CD y despliegue en Cloudflare.</p>
+              <div class="tags" role="list">
+                <span role="listitem">Cloudflare</span>
+                <span role="listitem">Cloud</span>
+                <span role="listitem">DevOps</span>
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
 
-            <article class="card" style="--i:3">
-              <h3>Cripto Report</h3>
-              <p>AES-GCM, ECC, DH y diseño tipo TLS.</p>
-              <div class="tags">
-                <span>Security</span><span>Crypto</span><span>Docs</span>
+            <article class="card" style="--i:3" tabindex="0">
+              <h3>Documentación UML</h3>
+              <p>Modelado completo: casos de uso, diagramas de clases, secuencia y despliegue.</p>
+              <div class="tags" role="list">
+                <span role="listitem">UML</span>
+                <span role="listitem">Requisitos</span>
+                <span role="listitem">Diseño</span>
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
 
-            <article class="card" style="--i:4">
-              <h3>Recommender</h3>
-              <p>Item-item con métricas y evaluación básica.</p>
-              <div class="tags">
-                <span>Algoritmos</span><span>C++</span><span>Datos</span>
+            <article class="card" style="--i:4" tabindex="0">
+              <h3>Concurrent Programming</h3>
+              <p>Multithreaded and multiprocess programming with synchronization and resource management.</p>
+              <div class="tags" role="list">
+                <span role="listitem">C</span>
+                <span role="listitem">Threads</span>
+                <span role="listitem">Processes</span>    
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
 
-            <article class="card" style="--i:5">
-              <h3>VHDL</h3>
-              <p>MUX, FSM y prácticas digitales documentadas.</p>
-              <div class="tags">
-                <span>HDL</span><span>Digital</span><span>Labs</span>
+            <article class="card" style="--i:5" tabindex="0">
+              <h3>Agile Project Management</h3>
+              <p>Task planning and tracking using Scrum and Kanban methodologies.</p>
+              <div class="tags" role="list">
+                <span role="listitem">Trello</span>
+                <span role="listitem">Taiga</span>
+                <span role="listitem">Slack</span>
               </div>
-              <a class="card__link" href="#contact">Ver más</a>
+              <a class="card__link" href="#contacto">Más información</a>
             </article>
           </div>
 
-          <div class="stage__hint">
-            Pasa el ratón para pausar. En móvil, se reduce la animación.
-          </div>
+          <p class="stage__hint">
+            <span class="hint-desktop">Arrastra para rotar • Pasa el ratón para pausar</span>
+            <span class="hint-mobile">Desliza para explorar proyectos</span>
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="grid" id="about">
-      <div class="panel">
+    <!-- About & Contact Grid -->
+    <section class="grid" id="sobre-mi">
+      <article class="panel">
         <h2>Sobre mí</h2>
         <p>
-          Enfocado en ingeniería del software y redes. Me gusta construir sistemas que funcionen
-          de verdad: desde protocolos y topologías hasta bases de datos.
+          Estudiante de ingeniería enfocado en desarrollo de software y redes. Me apasiona 
+          construir sistemas que realmente funcionen: desde protocolos de red y servidores 
+          concurrentes hasta arquitecturas de software bien diseñadas.
         </p>
-      </div>
+        <p>
+          Creo en la importancia de escribir código limpio, documentar adecuadamente 
+          y seguir buenas prácticas desde el primer día.
+        </p>
+      </article>
 
-      <div class="panel">
-        <h2>Lo que ofrezco</h2>
+      <article class="panel">
+        <h2>¿Qué ofrezco?</h2>
         <ul>
-          <li>Proyectos robustos con documentación clara</li>
-          <li>Buenas prácticas, estructura y mantenimiento</li>
-          <li>Orientación a resultados (y a entregar a tiempo)</li>
+          <li>Desarrollo de sistemas robustos y escalables</li>
+          <li>Documentación técnica clara y completa</li>
+          <li>Conocimientos sólidos en redes y protocolos</li>
+          <li>Orientación a resultados y entrega puntual</li>
+          <li>Código mantenible con buenas prácticas</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="panel" id="contact">
+      <article class="panel" id="contacto">
         <h2>Contacto</h2>
-        <p>Deja tu email y te respondo:</p>
-        <form class="form" onsubmit="return false;">
-          <input type="email" placeholder="tuemail@ejemplo.com" aria-label="Email" />
+        <p>¿Tienes un proyecto en mente? Hablemos:</p>
+        
+        <form class="form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="email" class="visually-hidden">Tu correo electrónico</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              placeholder="tu@email.com" 
+              aria-label="Correo electrónico"
+              required
+              autocomplete="email"
+            >
+          </div>
           <button class="btn" type="submit">Enviar</button>
         </form>
-        <small class="muted">Consejo: añade aquí tus enlaces (GitHub, LinkedIn).</small>
-      </div>
+        
+        <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+        
+        <div class="social-links">
+          <a href="https://github.com/niclox44" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/nicolas-andicoberry-lópez-b2a874324" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        
+        <small class="muted">
+          Nota: Actualiza los enlaces sociales con tus perfiles reales
+        </small>
+      </article>
     </section>
 
+    <!-- Footer -->
     <footer class="foot">
-      <span>© <span id="y"></span> Portfolio Orbit</span>
-      <span class="muted">Hecho con HTML + CSS</span>
+      <span>© <span id="currentYear"></span> Carlos Nicolás Andicoberry López</span>
+      <span class="muted">Hecho con HTML, CSS y JavaScript</span>
     </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-  const ring = document.querySelector('.ring');
-
-  let isDragging = false;
-  let lastX = 0;
-  let lastY = 0;
-
-  let rotationY = 0;
-  let rotationX = 10;
-
-  let velocityY = 0;
-  let velocityX = 0;
-
-  const friction = 0.92;
-
-  function animateInertia() {
-    if (!isDragging) {
-      rotationY += velocityY;
-      rotationX += velocityX;
-
-      velocityY *= friction;
-      velocityX *= friction;
-
-      ring.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-    }
-    requestAnimationFrame(animateInertia);
-  }
-
-  animateInertia();
-
-  ring.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    lastX = e.clientX;
-    lastY = e.clientY;
-    ring.style.cursor = 'grabbing';
-  });
-
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-    ring.style.cursor = 'grab';
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    const deltaX = e.clientX - lastX;
-    const deltaY = e.clientY - lastY;
-
-    rotationY += deltaX * 0.4;
-    rotationX -= deltaY * 0.3;
-
-    velocityY = deltaX * 0.2;
-    velocityX = -deltaY * 0.15;
-
-    ring.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-
-    lastX = e.clientX;
-    lastY = e.clientY;
-  });
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>

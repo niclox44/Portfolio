@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Proyectos</title>
+  <meta name="description" content="Proyectos de Carlos Nicolás Andicoberry López: Portfolio, Blackjack, Concurrencia, VCG y pruebas con Cloudflare." />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="blob blob--a"></div>
+    <div class="blob blob--b"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="index.html" aria-label="Volver al inicio">
+      <span class="brand__dot"></span>
+      <span class="brand__full">Carlos Nicolás Andicoberry López</span>
+      <span class="brand__short">Carlos N.</span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="proyects.html" aria-current="page">Proyectos</a>
+      <a href="index.html#about">Sobre mí</a>
+      <a href="index.html#contact" class="pill">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="projects-title" style="padding: var(--space-2xl) 0 var(--space-xl);">
+      <h1 id="projects-title">Proyectos</h1>
+      <p>
+        Selección de mis repositorios principales, incluyendo desarrollo en C/C++,
+        concurrencia y despliegues en Cloudflare Workers.
+      </p>
+
+      <div class="grid" role="list">
+        <!-- Portfolio -->
+        <article class="panel" role="listitem">
+          <h3>Portfolio</h3>
+          <p>
+            Mi portfolio personal desarrollado con HTML, CSS y JavaScript, con diseño moderno
+            e interacción avanzada. Desplegado en Cloudflare Workers.
+          </p>
+          <div class="tags" role="list" aria-label="Tecnologías">
+            <span role="listitem">HTML</span>
+            <span role="listitem">CSS</span>
+            <span role="listitem">JavaScript</span>
+            <span role="listitem">Cloudflare</span>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a class="card__link" href="https://github.com/niclox44/Portfolio" target="_blank" rel="noopener">
+              Repositorio
+            </a>
+            <a class="card__link" href="https://portfolio.nicoberry008.workers.dev/" target="_blank" rel="noopener">
+              Ver demo
+            </a>
+          </div>
+        </article>
+
+        <!-- blackJack -->
+        <article class="panel" role="listitem">
+          <h3>blackJack</h3>
+          <p>
+            Blackjack (Work in Progress). Base del juego en C con arquitectura cliente/servidor
+            y uso de sockets.
+          </p>
+          <div class="tags" role="list" aria-label="Tecnologías">
+            <span role="listitem">C</span>
+            <span role="listitem">Sockets</span>
+            <span role="listitem">Makefile</span>
+          </div>
+          <a class="card__link" href="https://github.com/niclox44/blackJack" target="_blank" rel="noopener">
+            Ver repositorio
+          </a>
+        </article>
+
+        <!-- Multithreaded-and-multiprocess-programming -->
+        <article class="panel" role="listitem">
+          <h3>Multithreaded and Multiprocess Programming</h3>
+          <p>
+            Repositorio en C centrado en programación concurrente mediante hilos y procesos.
+          </p>
+          <div class="tags" role="list" aria-label="Tecnologías">
+            <span role="listitem">C</span>
+            <span role="listitem">Threads</span>
+            <span role="listitem">Processes</span>
+          </div>
+          <a class="card__link" href="https://github.com/niclox44/Multithreaded-and-multiprocess-programming" target="_blank" rel="noopener">
+            Ver repositorio
+          </a>
+        </article>
+
+        <!-- VCG-Mechanism -->
+        <article class="panel" role="listitem">
+          <h3>VCG-Mechanism</h3>
+          <p>
+            Implementación en C++ del mecanismo Vickrey–Clarke–Groves (VCG)
+            para subastas combinatorias mediante bitmasks.
+          </p>
+          <div class="tags" role="list" aria-label="Tecnologías">
+            <span role="listitem">C++</span>
+            <span role="listitem">Algoritmos</span>
+            <span role="listitem">Auctions</span>
+          </div>
+          <a class="card__link" href="https://github.com/niclox44/VCG-Mechanism" target="_blank" rel="noopener">
+            Ver repositorio
+          </a>
+        </article>
+
+        <!-- comment-page -->
+        <article class="panel" role="listitem">
+          <h3>comment-page</h3>
+          <p>
+            Proyecto experimental creado como prueba para aprender y validar el despliegue
+            de aplicaciones en Cloudflare Workers.
+          </p>
+          <div class="tags" role="list" aria-label="Tecnologías">
+            <span role="listitem">HTML</span>
+            <span role="listitem">JavaScript</span>
+            <span role="listitem">Cloudflare</span>
+            <span role="listitem">Workers</span>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <a class="card__link" href="https://github.com/niclox44/comment-page" target="_blank" rel="noopener">
+              Repositorio
+            </a>
+            <a class="card__link" href="https://gsasd.nicoberry008.workers.dev/" target="_blank" rel="noopener">
+              Ver demo
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="foot" aria-label="Pie de página">
+      <span class="muted">© <span id="currentYear"></span> Carlos Nicolás Andicoberry López</span>
+      <span class="muted">
+        GitHub: <a href="https://github.com/niclox44" target="_blank" rel="noopener">niclox44</a>
+      </span>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
