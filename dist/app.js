@@ -140,6 +140,7 @@ function initCarousel() {
 
 // ====== Formulario de contacto ======
 function initContactForm() {
+  const apiBaseUrl = 'https://nicolasandicoberry.dev/api/contact';
   const form = document.getElementById('contactForm');
   const emailInput = document.getElementById('email');
   const messageDiv = document.getElementById('formMessage');
@@ -164,9 +165,8 @@ function initContactForm() {
       // Simular delay de red
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // AQUÍ DEBERÍAS HACER LA PETICIÓN REAL A TU BACKEND
-      // Ejemplo:
-      const response = await fetch('/api/contact', {
+      
+      const response = await fetch(apiBaseUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })

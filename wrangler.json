@@ -1,13 +1,18 @@
 {
-  "name": "portfolio",
-  "compatibility_date": "2026-01-18",
-  "assets": {
-    "directory": "./dist"
-  },
-  "observability": {
-    "enabled": false
-  }
-
-  
+	"name": "portfolio",
+	"compatibility_date": "2026-01-18",
+	"assets": {
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": false
+	},
+	"d1_databases": [
+		{
+			"binding": "emails_db",
+			"database_name": "emails_db",
+			"database_id": "34f0002e-a472-48e2-9222-0b6ad8acc412",
+			"remote": false
+		}
+	]
 }
-
