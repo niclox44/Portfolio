@@ -1,4 +1,4 @@
-// src/worker.js
+// src/index.js
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -7,7 +7,7 @@ export default {
     // API: POST /api/contact
     // =========================
     if (url.pathname === "/api/contact") {
-      // Preflight CORS (por si llamas desde otro dominio o navegador lo requiere)
+
       if (request.method === "OPTIONS") {
         return new Response(null, { headers: corsHeaders(request) });
       }
@@ -41,8 +41,6 @@ export default {
         );
       }
 
-      // Asegúrate de haber creado la tabla "emails" (schema.sql o wrangler d1 execute)
-      // Si no existe, D1 dará: "no such table: emails"
       try {
         await env.DB1.prepare(
           "INSERT INTO emails (email) VALUES (?1)"
@@ -68,7 +66,7 @@ export default {
     const assetResponse = await env.ASSETS.fetch(request);
 
     // Fallback opcional: si alguien pide una ruta que no existe y acepta HTML, devuelve index.html
-    // (No es imprescindible para tu web multi-página, pero no molesta)
+    // (No es imprescindible para mi web multi-página, pero no molesta)
     if (assetResponse.status === 404 && acceptsHtml(request)) {
       return env.ASSETS.fetch(new Request(new URL("/index.html", request.url), request));
     }
