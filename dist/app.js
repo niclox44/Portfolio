@@ -140,7 +140,7 @@ function initCarousel() {
 
 // ====== Formulario de contacto ======
 function initContactForm() {
-  const apiBaseUrl = 'https://nicolasandicoberry.dev/api/contact';
+  const apiBaseUrl = '/api/contact';
   const form = document.getElementById('contactForm');
   const emailInput = document.getElementById('email');
   const messageDiv = document.getElementById('formMessage');

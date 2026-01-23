@@ -1,8 +1,10 @@
 {
 	"name": "portfolio",
 	"compatibility_date": "2026-01-18",
+	"main": "src/index.js",
 	"assets": {
-		"directory": "./dist"
+		"directory": "./dist",
+		"binding": "ASSETS"
 	},
 	"observability": {
 		"enabled": false
