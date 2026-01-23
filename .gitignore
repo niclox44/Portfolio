@@ -1,0 +1,5 @@
+#Ignora la carpeta nodes_modules
+node_modules
+
+#Ignora carpeta .wrangler
+.wrangler
