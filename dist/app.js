@@ -141,6 +141,7 @@ function initCarousel() {
 // ====== Formulario de contacto ======
 function initContactForm() {
   const apiBaseUrl = '/api/contact';
+  const apiBaseUrlN8n = 'http://localhost:5678/webhook-test/portfolio-contact';
   const form = document.getElementById('contactForm');
   const emailInput = document.getElementById('email');
   const messageDiv = document.getElementById('formMessage');
@@ -174,6 +175,13 @@ function initContactForm() {
       if (!response.ok) throw new Error('Error al enviar');
 
       showMessage('¡Gracias! Me pondré en contacto contigo pronto.', 'success');
+
+      const n8n = await fetch(apiBaseUrlN8n,{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
       form.reset();
 
       // Ocultar mensaje después de 5 segundos
