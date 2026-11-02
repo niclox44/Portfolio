@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none" stroke="#1c1917" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" stroke-width=".55" opacity=".5"/></pattern>
+    <path id="spade" d="M0-25C-7-14-22-7-22 5c0 15 17 18 22 6 5 12 22 9 22-6C22-7 7-14 0-25ZM0 10c-1 10-4 15-10 19H10C4 25 1 20 0 10Z"/>
+    <mask id="card-mask"><rect width="800" height="450" fill="white" stroke="none"/><rect x="-82" y="-123" width="177" height="251" rx="7" transform="translate(331 201) rotate(8)" fill="black" stroke="none"/></mask>
+  </defs>
+  <g opacity=".45" stroke-width=".65"><path d="M71 49H729M71 398H729M82 39V59M718 39V59M82 388V408M718 388V408"/><path d="M71 54H729M71 393H729" stroke-dasharray="1 7"/></g>
+  <g mask="url(#card-mask)"><g transform="translate(230 208) rotate(-11)">
+    <rect x="-113" y="-130" width="187" height="259" rx="7" fill="url(#hatch)" stroke-width="1.8"/>
+    <rect x="-106" y="-123" width="173" height="245" rx="3" stroke-width=".7"/>
+    <path d="M-98-84V-114H-68M29 113H59V83" stroke-width=".75"/>
+    <text x="-92" y="-89" fill="#1c1917" stroke="none" font-family="Georgia,serif" font-size="27">A</text>
+    <use href="#spade" transform="translate(-82 -67) scale(.32)" fill="#1c1917" stroke="none"/>
+    <use href="#spade" transform="translate(-19 -3) scale(1.2)" fill="#1c1917" stroke-width="1.2"/>
+    <use href="#spade" transform="translate(-19 -3) scale(1.45)" stroke-width=".6"/>
+    <g transform="rotate(180 -19 -1)"><text x="-92" y="-89" fill="#1c1917" stroke="none" font-family="Georgia,serif" font-size="27">A</text><use href="#spade" transform="translate(-82 -67) scale(.32)" fill="#1c1917" stroke="none"/></g>
+  </g></g>
+  <g transform="translate(331 201) rotate(8)">
+    <rect x="-82" y="-123" width="177" height="251" rx="7" stroke-width="1.8"/>
+    <rect x="-75" y="-116" width="163" height="237" rx="3" stroke-width=".65"/>
+    <text x="-63" y="-83" fill="#1c1917" stroke="none" font-family="Georgia,serif" font-size="27">K</text>
+    <use href="#spade" transform="translate(-52 -62) scale(.29)" fill="#1c1917" stroke="none"/>
+    <g transform="translate(7 3)">
+      <path d="M-49-68H49V68H-49Z" stroke-width=".65"/><path d="M-44-63H44V63H-44Z" stroke-width=".5"/>
+      <path d="M-27-25-32-48-14-38 0-55 14-38 32-48 27-25ZM-27-20H27M-24-15H24" stroke-width="1.4"/>
+      <path d="M-18-11C-24 4-15 22 0 25 15 22 24 4 18-11M-7-2-10 3H-4M4 3H10L7-2M0 3-2 11H3M-6 17C-2 19 2 19 6 17M-17 0-27 10-20 27M17 0 27 10 20 27M-14 22-34 38-36 57M14 22 34 38 36 57M-13 29 0 44 13 29M-29 42-8 58M29 42 8 58M0 44V59" stroke-width="1"/>
+      <path d="M-19-32H19M-15-38-12-29M15-38 12-29M-25 43-18 39M-20 48-13 44M-15 53-8 49M25 43 18 39M20 48 13 44M15 53 8 49" stroke-width=".55"/>
+      <path d="m-39-58 3 4-3 4-3-4ZM39-58l3 4-3 4-3-4ZM-39 50l3 4-3 4-3-4ZM39 50l3 4-3 4-3-4Z" stroke-width=".55"/>
+    </g>
+    <g transform="rotate(180 6.5 2.5)"><text x="-63" y="-83" fill="#1c1917" stroke="none" font-family="Georgia,serif" font-size="27">K</text><use href="#spade" transform="translate(-52 -62) scale(.29)" fill="#1c1917" stroke="none"/></g>
+  </g>
+  <g stroke-width=".9">
+    <path d="M448 159H495V185H541M448 265H495V239H541"/><path d="m483 154 6 5-6 5M508 234-6 5 6 5"/>
+    <circle cx="447" cy="159" r="3"/><circle cx="447" cy="265" r="3"/>
+    <rect x="546" y="140" width="116" height="144" rx="2" stroke-width="1.5"/>
+    <path d="M552 146H656V278H552ZM546 175H662M546 210H662M546 245H662" stroke-width=".65"/>
+    <path d="M567 158H615M567 193H615M567 228H615M567 263H615" stroke-width=".65"/>
+    <g fill="#1c1917" stroke="none"><circle cx="641" cy="158" r="2.5"/><circle cx="641" cy="193" r="2.5"/><circle cx="641" cy="228" r="2.5"/><circle cx="641" cy="263" r="2.5"/></g>
+    <path d="M562 284V296H646V284M559 301H649M575 307H634" stroke-width=".75"/>
+  </g>
+  <g fill="#1c1917" stroke="none" font-family="Georgia,serif" text-anchor="middle"><text x="605" y="125" font-size="11" letter-spacing="2">SERVER</text><text x="490" y="209" font-size="11" font-style="italic">TCP</text><text x="490" y="225" font-size="9" letter-spacing="1">SOCKETS</text><text x="400" y="373" font-size="11" letter-spacing="3">FIG. I · THE GAME OF CONNECTIONS</text></g>
+</svg>

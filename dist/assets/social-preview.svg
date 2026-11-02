@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Portafolio de Carlos Nicolás</title><desc id="desc">Portada de libro en papel marfil con tipografía clásica y bordes finos.</desc>
+<style>@font-face{font-family:Fell;src:url('./fonts/im-fell-english-regular.ttf')}@font-face{font-family:Fell;src:url('./fonts/im-fell-english-italic.ttf');font-style:italic}@font-face{font-family:FellSC;src:url('./fonts/im-fell-english-sc.ttf')}text{fill:#21211d;text-anchor:middle;font-family:Fell,Georgia,serif}.sc{font-family:FellSC,Georgia,serif}</style>
+<rect width="1200" height="630" fill="#e4e2d7"/>
+<g stroke="#21211d" fill="none"><rect x="28" y="28" width="1144" height="574"/><rect x="34" y="34" width="1132" height="562"/><path d="M378 359H565M635 359H822M600 349l10 10-10 10-10-10Z" stroke-width=".75"/></g>
+<text class="sc" x="600" y="90" font-size="22">PORTAFOLIO</text>
+<text class="sc" x="600" y="238" font-size="96">Carlos Nicolás</text>
+<text x="600" y="304" font-size="34" font-style="italic">Desarrollo de software</text>
+<text x="600" y="428" font-size="28">Proyectos, aprendizajes &amp; un poco de curiosidad.</text>
+<text class="sc" x="600" y="550" font-size="18">EDICIÓN PERSONAL · MMXXVI</text>
+</svg>
